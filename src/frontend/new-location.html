@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Nueva Ubicación</title>
+    </head>
+    <body>
+        <img src="./img/gatekeeper_logo.jpg" alt="Logo" class="header-logo">
+    </body>
+    <table class="tabla-centrada">
+        <tr>
+            <th ></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td style="background-color: #E6E7E8;border: 1px solid #E6E7E8;">
+                <img src="./img/admin_control.jpg" alt="AdminControl" style="display: block; margin-left: auto;margin-right: auto;width: 25%;">                
+               
+                <br><br>
+                <a href="./new-user.html"><button class="menu_control_button">Nuevo Usuario</button></a>
+                <br><br>
+                <a href="./new-rol.html"><button class="menu_control_button">Agregar Rol</button></a>
+                <br><br>
+                <a href="./new-permission.html"><button class="menu_control_button">Permisos Ingreso</button></a>
+                <br><br>
+                <a href="./access-report.html"><button class="menu_control_button">Registro Ingreso</button></a>
+                <br><br>
+                <a href="./index.html"><button class="menu_control_button">Acceder Ubicación</button></a>
+            </td>
+            <td style="vertical-align: top;">
+                <img src="./img/nueva_ubicacion_tittle.jpg" alt="Nueva Ubicacion" class="img_center">
+                <br>
+                <form action="responses/success.html" method="get" autocomplete="on">
+                    <label for="nombre-location" >Agregue el nombre de la ubicación: </label>
+                    <input type="text" id="nombre-location" placeholder="Nombre para la ubicación">
+                    <br><br>
+                    <label for="descr-location">Agregue una descripción de la ubicación: </label>
+                    <input type="text" id="descr-location" placeholder="Decripción Ubicación">                    
+                </form>
+                <br><br>
+                <a href="./new-location.html"><img src="./img/nueva_ubicacion_boton.jpg" alt="Nuevo Ubicacion" class="button_img"></a>
+            </td>            
+
+        </tr>
+    </table>
+
+</html>
