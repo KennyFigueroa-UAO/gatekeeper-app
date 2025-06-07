@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Nuevo Usuario</title>
+    </head>
+    <body>
+        <img src="./img/gatekeeper_logo.jpg" alt="Logo" class="header-logo">
+    </body>
+    <table class="tabla-centrada">
+        <tr>
+            <th ></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td style="background-color: #E6E7E8;border: 1px solid #E6E7E8;">
+                <img src="./img/admin_control.jpg" alt="AdminControl" style="display: block; margin-left: auto;margin-right: auto;width: 25%;">                
+               
+                <br><br>
+                <a href="./new-rol.html"><button class="menu_control_button">Nuevo Rol</button></a>
+                <br><br>
+                <a href="./new-location.html"><button class="menu_control_button">Agregar Ubicación</button></a>
+                <br><br>
+                <a href="./new-permission.html"><button class="menu_control_button">Permisos Ingreso</button></a>
+                <br><br>
+                <a href="./access-report.html"><button class="menu_control_button">Registro Ingreso</button></a>
+                <br><br>
+                <a href="./index.html"><button class="menu_control_button">Acceder Ubicación</button></a>
+            </td>
+            <td style="vertical-align: top;">
+                <img src="./img/nuevo_usuario_tittle.jpg" alt="Nuevo Usuario" class="img_center">
+                <br>
+                <form action="responses/success.html" method="get" autocomplete="on">
+                    <label for="nombre-completo" >Dígite el nombre completo: </label>
+                    <input type="text" id="nombre-completo" placeholder="Dígite el nombre completo">
+                    <br><br>
+                    <label for="numero-identificacion" >Dígite el numero de identificación: </label>
+                    <input type="text" id="numero-identificacion" placeholder="Dígite el numero de identificación">
+                    <br><br>
+                    <label for="correo-electronico" >Dígite el correo electrónico: </label>
+                    <input type="text" id="correo-electronico" placeholder="Dígite el correo electrónico">
+                    <br><br>
+                    <label for="rol-usuario">Seleccione el rol para este usuario: </label>
+                    <select name="rol-usuario" id="rol-usuario" class="form-access-select">
+                        <option value="">Seleccione un rol...</option>
+                        <option value="admin">Administrador</option>
+                        <option value="user">Usuario</option>
+                        <option value="super">Supervisor</option>
+                        <option value="inv">Invitado</option>
+                        <option value="ger">Gerente</option>
+                        <option value="analist">Analista</option>
+                        <option value="tecn">Tecnico</option>
+                        <option value="desa">Desarrollador</option>
+                        <option value="sop">Soporte</option>
+                        <option value="audi">Auditor</option>
+                    </select>
+                </form>
+                <br><br>
+                <a href="./new-user.html"><img src="./img/nuevo_usuario_boton.jpg" alt="Nuevo Usuario" class="button_img"></a>
+            </td>            
+
+        </tr>
+    </table>
+
+</html>

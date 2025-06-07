@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Nuevo Rol</title>
+    </head>
+    <body>
+        <img src="./img/gatekeeper_logo.jpg" alt="Logo" class="header-logo">
+    </body>
+    <table class="tabla-centrada">
+        <tr>
+            <th ></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td style="background-color: #E6E7E8;border: 1px solid #E6E7E8;">
+                <img src="./img/admin_control.jpg" alt="AdminControl" style="display: block; margin-left: auto;margin-right: auto;width: 25%;">                
+               
+                <br><br>
+                <a href="./new-user.html"><button class="menu_control_button">Nuevo Usuario</button></a>
+                <br><br>
+                <a href="./new-location.html"><button class="menu_control_button">Agregar Ubicación</button></a>
+                <br><br>
+                <a href="./new-permission.html"><button class="menu_control_button">Permisos Ingreso</button></a>
+                <br><br>
+                <a href="./access-report.html"><button class="menu_control_button">Registro Ingreso</button></a>
+                <br><br>
+                <a href="./index.html"><button class="menu_control_button">Acceder Ubicación</button></a>
+            </td>
+            <td style="vertical-align: top;">
+                <img src="./img/nuevo_rol_tittle.jpg" alt="Nuevo Rol" class="img_center">
+                <br>
+                <form action="responses/success.html" method="get" autocomplete="on">
+                    <label for="nombre-rol" >Dígite el nombre para el rol: </label>
+                    <input type="text" id="nombre" placeholder="Dígite el nombre para el rol">
+                    <br><br>
+                    <label for="descr-rol">Agregue una descripción del rol: </label>
+                    <input type="text" id="descr-rol" placeholder="Decripción rol">                    
+                </form>
+                <br><br>
+                <a href="./new-rol.html"><img src="./img/nuevo_rol_boton.jpg" alt="Nuevo Rol" class="button_img"></a>
+            </td>            
+
+        </tr>
+    </table>
+
+</html>
