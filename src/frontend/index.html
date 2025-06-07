@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Acceso</title>
+
+    </head>
+
+    <body>
+
+        <img src="./img/gatekeeper_logo.jpg" alt="Logo" class="header-logo">
+        <table class="tabla-centrada">
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>
+                    <button class="admin_control_button" onclick="document.location='new-user.html'">Admin Control</button> 
+                </td>
+                <td>
+                    <img src="./img/access_control.jpg" alt="Access_Control" style="display: block; margin-left: auto;margin-right: auto;width: 15%;">
+             
+
+                    <form action="responses/success.html" method="get" autocomplete="on">
+                        <label for="identificacion" class="form-access-label">Dígite su identificación.</label>
+                        <br><br>
+                        <input type="text" id="identificacion" class="form-access-input" placeholder="Dígite su identificación" >
+                        <br>
+                        <label for="ubicacion" class="form-access-label">Seleccione la ubicación que desea acceder.</label>
+                        <br><br>
+                        <select name="ubicacion" id="ubicacion" class="form-access-select">                
+                            <option value="">Seleccione...</option>
+                            <option value="oc">Oficina Central</option>
+                            <option value="ap">Almacén Principal</option>
+                            <option value="sn">Sucursal Norte</option>
+                            <option value="ss">Sucursal Sur</option>
+                            <option value="pp">Planta de Producción</option>
+                            <option value="cd">Centro de Datos</option>
+                            <option value="sr">Sala de Reuniones</option>
+                            <option value="rp">Recepción</option>
+                            <option value="es">Estacionamiento</option>
+                            <option value="lb">Laboratorio</option>
+                        </select>
+                    </form>
+                    <br>
+                    <button class="arrow-button">Autorizar Ingreso</button>
+                </td>
+            </tr>               
+        </table>
+    </body>
+</html>
