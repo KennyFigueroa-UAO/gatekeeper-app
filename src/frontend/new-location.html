@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="./css/style.css">
         <title>Nueva Ubicación</title>
     </head>
@@ -45,5 +47,54 @@
 
         </tr>
     </table>
+
+    <script>
+
+            document.addEventListener('DOMContentLoaded', () => {
+            const btnSwitch = document.getElementById('btnSwitch');
+            const icon = btnSwitch.querySelector('i');
+            const themeText = document.getElementById('themeText');
+
+            // Funcion para actualizar apariencia del boton
+            function updateButton(isDark) {
+                if (isDark) {
+                    icon.classList.replace('bi-moon-fill','bi-sun-fill');
+                    themeText.textContent = 'Modo Claro';
+                    btnSwitch.className = 'btn btn-dark shadow';
+                } else {
+                    icon.classList.replace('bi-sun-fill','bi-moon-fill');
+                    themeText.textContent = 'Modo Oscuro';
+                    btnSwitch.className = 'btn btn-light shadow';
+                }
+            }
+
+            // Funcion para alternar tema
+            function toggleTheme() {
+                const isDark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+                const newTheme = isDark ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-bs-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateButton(!isDark);
+            }
+
+            // Configuracion inicial
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-bs-theme', 'light');
+                updateButton(false);
+            }
+            
+            // Evento clic
+            btnSwitch.addEventListener('click', toggleTheme);
+        });        
+        </script>
+        
+
+         <div class="fixed-bottom">
+            <button class="btn btn-dark shadow" id="btnSwitch">
+                <i class="bi bi-moon-fill"></i> <span id="themeText">Modo Oscuro</span>
+            </button>
+        </div>
 
 </html>
